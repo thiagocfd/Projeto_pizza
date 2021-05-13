@@ -300,12 +300,14 @@ tr:hover{
     text-align: center;
 }
 
-select {
+.formulario select {
     margin-top: 10px;
     margin-bottom: 20px;
     align-items: center;
+    height: 20px;
     width: 200px;
 }
+
 
 
 

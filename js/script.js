@@ -40,21 +40,22 @@ listar();
 // })
 
 
+$(document).ready(function(){
+    carregar_json('Sabores');
+    function carregar_json(id){
+        var html = '';
+        $.getJSON('sabores.json', function(data) {
+            html += '<option>Selecionar' + id + '</option>';
 
-// $(document).ready(function () {
-//     $.getJSON("sabores.json", function (result) {
-//         $.each(result, function (i, nome) {
-//             $("#sabores").append("<option value="+nome+">"+nome+"</option>");
-//         });
-//     });
-// });
-
-
-// $(document).ready(function(){
-//     $.getJSON('sabores.json', function(data) {
-//         $.each(data, function(id, nome) {
-//             $("#sabores").append('<option name="' + data.id + '">' + data.nome + '</option>');
-//         });
-//     });
-// });
+            if(id == 'Sabores'){
+                for(var i = 0; i < data.length; i++){
+                    html += '<option value=' + data[i].nome +'> '+ data[i].nome +':   ' + data[i].valor +'</option>';
+                }
+            }
+            $('#sabor_valor').html(html);
+        });
+        
+    }
+        
+});
 
