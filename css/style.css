@@ -287,7 +287,7 @@ tr:hover{
     margin-left: 450px;
     color: white;
     border: 1px solid purple;
-    background: rgb(19, 19, 19);
+    background: #131313;
 }
 
 .formulario h2 {
@@ -298,6 +298,15 @@ tr:hover{
 
 .select {
     text-align: center;
+    padding: 5px 0;
+}
+
+.select #btn_sabor {
+    width: 100px;
+    height: 20px;
+    background: #fec63e;
+    border: none;
+    font-weight: bold;
 }
 
 .formulario select {
@@ -308,6 +317,25 @@ tr:hover{
     width: 200px;
 }
 
+.calculadora {    
+    width: 500px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 450px;
+    color: white;
+    border: 1px solid #fec63e;
+}
 
+.calculadora h2 {
+    text-align: center;
+    padding: 15px;
+    color: purple;
+}
+
+.calculadora h3 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+}
 
 

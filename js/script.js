@@ -35,7 +35,7 @@ listar();
 //     })
 // }
 
-// $('#adicionar').click(function() {
+// $('#selecionar').click(function() {
 //     addSabor(); 
 // })
 
@@ -45,17 +45,40 @@ $(document).ready(function(){
     function carregar_json(id){
         var html = '';
         $.getJSON('sabores.json', function(data) {
-            html += '<option>Selecionar' + id + '</option>';
-
+            html += '<option>Selecione o sabor</option>';
             if(id == 'Sabores'){
                 for(var i = 0; i < data.length; i++){
-                    html += '<option value=' + data[i].nome +'> '+ data[i].nome +':   ' + data[i].valor +'</option>';
+                    html += '<option value=' + data[i].id +'> '+ data[i].nome +'</option>';
                 }
             }
             $('#sabor_valor').html(html);
+
         });
-        
-    }
-        
+    }    
 });
+
+
+
+// function adcSabor() {
+//     var select = document.querySelector('select');
+//     var option = select.children[select.selectedIndex];
+//     var texto = option.textContent;
+//     // console.log(texto); // item 2
+
+//     $.ajax({
+//         url: 'https://pizzaria.roxo.dev.br/',
+//         method: 'get',
+//         success(data) {
+//             for(i = 0; i < data.length; i++) {
+//                 if(data[i].nome === texto) {
+//                     console.log(data[i].valor);                
+//                 }               
+//             };
+//         }
+//     });
+//     $('#btn_sabor').click(function(){
+//         adcSabor();
+//     });
+
+// }
 

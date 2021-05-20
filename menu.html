@@ -16,7 +16,7 @@
             </a>
             <nav class="header_menu">
                 <ul>
-                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="menu.html">Pedido</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
@@ -27,7 +27,7 @@
     
     <section class="bem_vindo menu">
         <div class="container">
-            <h1>Menu</h1>
+            <h1>Pedido</h1>
             <blockquote class="quote">
                 <p>Escolha os sabores que o resto é por nossa conta!</p>
             </blockquote>
@@ -45,15 +45,15 @@
     <div class="formulario">
         <h2>Selecione o sabor</h2>    
         <div class="select">
-            <select name="qtd_sabores" id="qts_sabores">
-                <option value="sabor1">1 sabor</option>
-                <option value="sabor2">2 sabores</option>
-                <option value="sabor3">3 sabores</option>
-            </select>
+            <select id="sabor_valor"></select>
+            <input type="button" id="btn_sabor" value="Adicionar" onclick="fimPedido()"></input>
 
-            <select name="sabor_valor" id="sabor_valor"></select>
         </div>
+    </div>
 
+    <div class="calculadora">
+        <h2>Total a pagar:</h2>
+        <h3 id="calc"></h3>
 
     </div>
 
